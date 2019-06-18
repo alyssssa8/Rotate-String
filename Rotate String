@@ -1,0 +1,17 @@
+class Solution 
+{
+    public:
+    bool rotateString(string text, string pattern) 
+    {
+        if(text.length()!=pattern.length()) {   
+            return false;
+        }
+        string concatenatedString = text + text;
+        if(concatenatedString.find(pattern) != string::npos) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+};
